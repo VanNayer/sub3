@@ -1,0 +1,11 @@
+
+
+
+{% if not app.user %}
+    <h1>Welcome to sub3!</h1>
+    <a href="{{ path('connect_google')}}">Log in</a>
+{% else %}
+    <h1>Welcome {{app.user.firstname}} !</h1>
+    
+    <a href="{{ path('logout')}}">Log out</a>
+{% endif %}
